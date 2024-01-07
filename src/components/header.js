@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 const Header = ({ siteTitle }) => (
   <header
         className="code-section sticky top-0 z-50 font-['Heebo']"
-        id="gjycg"
       >
         <div id="top" className="w-full bg-white">
           <div className="">
