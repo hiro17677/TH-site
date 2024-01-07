@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[682],{5465:function(e,t,a){a.r(t);var l=a(7294),u=a(1883),s=a(6049);a(9357);t.default=()=>l.createElement(s.Z,null,l.createElement("h1",null,"About Us"),l.createElement("p",null,"This is a bit about us..."),l.createElement(u.Link,{to:"/"},"Go back to the homepage"))}}]);
+//# sourceMappingURL=component---src-pages-about-js-fee16b2fd9ce32974122.js.map
