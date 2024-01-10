@@ -105,9 +105,7 @@ const IndexPage = () => (
                   id="hero-subtext"
                   className="mb-8 text-base font-normal tracking-wide text-white"
                 >
-                  太樺工業股份有限公司成立於1989年，已是成立多年專業各式塑膠製品代工廠，
-貫徹"品質第一"，"誠信至上"，"服務客戶"精神，不斷追求公司成長與創新並持續朝工廠自動化發展
-
+                  太樺工業股份有限公司成立於1989年，已是成立多年專業各式塑膠製品代工廠，貫徹"品質第一"，"誠信至上"，"服務客戶"精神，不斷追求公司成長與創新並持續朝工廠自動化發展
                 </p>
                 <a
                   id="hero-cta-button"
