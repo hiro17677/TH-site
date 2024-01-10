@@ -99,13 +99,15 @@ const IndexPage = () => (
                   id="hero-header-text"
                   className="mb-6 text-3xl font-semibold text-white lg:text-6xl"
                 >
-                  可靠的塑膠射出解決方案
+                  專業塑膠射出代工廠
                 </h1>
                 <p
                   id="hero-subtext"
                   className="mb-8 text-base font-normal tracking-wide text-white"
                 >
-                  我們專注於提供高品質的塑膠射出成型服務，結合精密技術和創新工藝，為工業採購經理、產品設計師和小型企業所有者帶來定制且高效的塑膠部件。
+                  太樺工業股份有限公司成立於1989年，已是成立多年專業各式塑膠製品代工廠，
+貫徹"品質第一"，"誠信至上"，"服務客戶"精神，不斷追求公司成長與創新並持續朝工廠自動化發展
+
                 </p>
                 <a
                   id="hero-cta-button"
@@ -199,20 +201,21 @@ const IndexPage = () => (
               id="services-mini-header"
               className="primary-color-text pb-8 text-center text-base font-medium uppercase tracking-widest lg:text-left text-green-500"
             >
-              Our Services
+              服務項目
             </h3>
             <div className="flex flex-col pb-8 sm:flex-row">
               <div
                 id="services-header"
                 className="mb-8 flex-1 text-center text-4xl font-semibold lg:text-left"
               >
-                體驗尖端服務的全方位組合
+                各種塑膠成型代工
               </div>
               <div
                 id="services-text"
                 className="flex-1 text-center text-xl lg:text-left"
               >
-                我們提供從設計、模具製作到組裝和包裝的一站式塑膠射出解決方案。
+                  太樺工業成立多年服務多家代工，對於各種塑膠成型擁有相當經驗，配合模具開發到塑膠
+                  射出提供整體服務
               </div>
             </div>
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-4">
@@ -230,7 +233,7 @@ const IndexPage = () => (
                   射出成型
                 </div>
                 <div id="service-1-text" className="px-8 pb-4 text-center">
-                我們為各行各業提供高精度的塑膠射出成型服務，憑藉先進的技術和豐富經驗，確保每一件產品都達到行業領先水準。
+                我們為各行各業提供塑膠射出成型服務，憑藉多年豐富經驗，確保每一件產品都達到客戶要求。
                 </div>
               </div>
               <div className="flex flex-1 flex-col border border-gray-300">
@@ -346,16 +349,16 @@ const IndexPage = () => (
                   id="big-service-2-header"
                   className="mb-6 text-center text-5xl font-semibold lg:text-left"
                 >
-                  創新和精確 - 塑膠產品的未來
+                  多年OEM代工經驗 您的專業夥伴
                 </div>
                 <div
                   id="big-service-2-text"
                   className="text-center text-xl font-light lg:text-left"
                 >
-                  我們的工廠裝備了最新的塑膠射出成型機器，專注於生產精密和高質量的塑膠部件。
+                  我們的工廠配備了多種射出成形機，從50噸射出機到260噸射出機台，專注於各項塑膠成型，我們的團隊不斷的創新和開發新客戶，包含文具商品，工安類別，汽車配件
                   <br />
                   <br />
-                  我們的專業團隊不斷創新，尋求提高效率和精度的方法，以確保我們的客戶獲得最佳的產品性能。從汽車零件到醫療設備，我們的產品廣泛應用於各種行業。                  
+                  ，環境用藥塑膠製品，小家電塑膠製品至五金塑膠類別等，我們服務各行各業只要是塑膠製品都能完成客戶需求                  
                 </div>
               </div>
             </div>
@@ -379,7 +382,7 @@ const IndexPage = () => (
                 id="big-service-3-text"
                 className="text-center text-xl font-light lg:text-left"
               >
-                客戶滿意是我們的首要任務。我們承諾提供卓越的客戶服務和無與倫比的產品質量。
+                客戶滿意是我們的首要任務。我們承諾提供卓越的客戶服務和達到客戶要求產品質量。
                 <br />
                 <br />
                 從原材料選擇到最終產品的檢驗，我們嚴格控制每一個生產環節。與我們合作，您將擁有一個可靠、靈活和專業的塑膠射出成型合作夥伴。              
@@ -397,7 +400,7 @@ const IndexPage = () => (
         </div>
       </div>
     </section>
-    <section className="code-section relative font-['Heebo']" id="7j46q">
+    {/* <section className="code-section relative font-['Heebo']">
       <div
         className="absolute inset-0 h-full w-full bg-cover bg-center object-cover brightness-[0.2]"
         style={{
@@ -451,7 +454,7 @@ const IndexPage = () => (
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
     <section
       className="code-section relative bg-stone-100 font-['Heebo']"
       id="9ve3x"
@@ -463,13 +466,13 @@ const IndexPage = () => (
               id="about-header"
               className="mb-6 text-center text-5xl font-semibold lg:text-left"
             >
-              About Tai
+              關於太樺
             </div>
             <div
               id="about-text"
               className="pb-12 text-center text-xl font-light lg:text-left"
             >
-              太樺工業股份有限公司，自1989年起，就以其卓越的專業知識和技術在塑膠製品生產領域中佔據領導地位。堅持「品質第一、誠信至上、服務客戶」的經營理念，我們不僅生產各式塑膠產品，更致力於為客戶提供全面的解決方案。
+              太樺工業股份有限公司，自1989年起，就以其卓越專業知識和技術在塑膠製品生產領域中。堅持「品質第一、誠信至上、服務客戶」的經營理念，我們不僅生產各式塑膠產品，更致力於為客戶提供全面的解決方案。
               <br />
               <br />
               在過去的幾十年裡，我們積極擴展業務範圍，涵蓋從小型定制部件到大規模生產需求的廣泛服務。我們的專業團隊擁有深厚的行業經驗，能夠快速響應市場變化，並提供符合最高標準的產品。太樺工業致力於成為您在塑膠製造過程中的堅實後盾，無論是產品設計的初期階段還是最終生產，我們都能提供專業的建議和支持。

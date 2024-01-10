@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import DropdownMenu from "../components/DropdownMenu";
 
 const Header = ({ siteTitle }) => (
   <header
@@ -48,83 +49,7 @@ const Header = ({ siteTitle }) => (
                   id="mobile-menu-icon"
                   className="flex items-center lg:hidden"
                 >
-                  <button
-                    className="text-gray-800"
-                    aria-label="Navigation Dropdown Menu"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={24}
-                      height={24}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="feather feather-menu"
-                    >
-                      <line x1={3} y1={12} x2={21} y2={12} />
-                      <line x1={3} y1={6} x2={21} y2={6} />
-                      <line x1={3} y1={18} x2={21} y2={18} />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div className="flex justify-center text-center lg:hidden">
-                <a
-                  id="nav-phone-href-override"
-                  href="tel:+18001234567"
-                  className="h-full w-full bg-blue-900 px-4 py-2 font-semibold uppercase tracking-wider text-white"
-                >
-                  <i className="fa-solid fa-phone" />
-                  <span> CALL US </span>
-                  <span id="nav-phone2">+1 800-123-4567</span>
-                </a>
-              </div>
-              <div className="flex justify-center text-center lg:hidden">
-                <a
-                  href="/#contact-us"
-                  className="h-full w-full bg-red-500 px-4 py-2 font-semibold uppercase tracking-wider text-white"
-                >
-                  Schedule Now
-                </a>
-              </div>
-              <div id="nav-links-mobile" className="mt-4 hidden lg:hidden">
-                <div className="flex flex-col space-y-2">
-                  <a
-                    id="nav-mobile-service-one"
-                    href="/#service-one"
-                    className="text-sm font-semibold uppercase tracking-widest text-gray-800"
-                  >
-                    Injection
-                  </a>
-                  <a
-                    id="nav-mobile-service-two"
-                    href="/#service-two"
-                    className="text-sm font-semibold uppercase tracking-widest text-gray-800"
-                  >
-                    Assembly
-                  </a>
-                  <a
-                    id="nav-mobile-service-three"
-                    href="/#service-three"
-                    className="text-sm font-semibold uppercase tracking-widest text-gray-800"
-                  >
-                    Packaging
-                  </a>
-                  <a
-                    href="/#testimonials"
-                    className="testimonials-link text-sm font-semibold uppercase tracking-widest text-gray-800"
-                  >
-                    Testimonials
-                  </a>
-                  <a
-                    href="/#contact-us"
-                    className="text-sm font-semibold uppercase tracking-widest text-gray-800"
-                  >
-                    Contact Us
-                  </a>
+                  <DropdownMenu />
                 </div>
               </div>
             </div>
@@ -171,5 +96,6 @@ const Header = ({ siteTitle }) => (
         </div>
       </header>
 )
+
 
 export default Header
