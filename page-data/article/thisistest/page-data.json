@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-article-js","path":"/article/thisistest/","result":{"data":{"contentfulArticle":{"title":"First test","publishDate":"January 9th, 2024","body":{"childMarkdownRemark":{"html":"<p>test test test</p>"}}}},"pageContext":{"slug":"thisistest"}},"staticQueryHashes":["1070560512","3649515864","63159454"],"slicesMap":{}}

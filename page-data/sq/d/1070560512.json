@@ -1,0 +1,1 @@
+{"data":{"allContentfulArticle":{"edges":[{"node":{"title":"Second test","slug":"secondtest","publishDate":"January 10th, 2024"}},{"node":{"title":"First test","slug":"thisistest","publishDate":"January 9th, 2024"}}]},"allContentfulCategory":{"edges":[{"node":{"title":"Category2","slug":"test2"}},{"node":{"title":"category1","slug":"test1"}}]}}}
