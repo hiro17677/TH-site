@@ -15,7 +15,7 @@ module.exports = {
     title: `太樺工業股份有限公司`,
     description: `太樺工業：自1989年以來，專精於提供高品質的塑膠射出成型服務。我們的專業團隊致力於為各行業提供精確的塑膠製品，包括專業的組裝和定制包裝解決方案。憑藉領先的技術和創新流程設計，我們為客戶創造最佳價值，堅守品質第一、誠信至上的承諾。選擇太樺工業，體驗尖端塑膠射出成型的專業服務。`,
     author: `HP`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://hiro17677.github.io/TH-site/`,
   },
   plugins: [
     `gatsby-plugin-image`,
