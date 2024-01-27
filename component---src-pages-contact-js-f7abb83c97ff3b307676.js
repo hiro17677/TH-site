@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[501],{5791:function(e,t,a){a.r(t);var l=a(7294),n=a(1883),s=a(9122);a(9357);t.default=()=>l.createElement(s.Z,null,l.createElement("h1",null,"Contact Us"),l.createElement("p",null,"This is a bit about us..."),l.createElement(n.Link,{to:"/"},"Go back to the homepage"))}}]);
+//# sourceMappingURL=component---src-pages-contact-js-f7abb83c97ff3b307676.js.map
