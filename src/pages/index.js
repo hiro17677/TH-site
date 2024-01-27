@@ -1,73 +1,13 @@
 import * as React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
-// const links = [
-//   {
-//     text: "Tutorial",
-//     url: "https://www.gatsbyjs.com/docs/tutorial",
-//     description:
-//       "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-//   },
-//   {
-//     text: "Examples",
-//     url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-//     description:
-//       "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-//   },
-//   {
-//     text: "Plugin Library",
-//     url: "https://www.gatsbyjs.com/plugins",
-//     description:
-//       "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-//   },
-//   {
-//     text: "Build and Host",
-//     url: "https://www.gatsbyjs.com/cloud",
-//     description:
-//       "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-//   },
-// ]
-
-// const samplePageLinks = [
-//   {
-//     text: "Page 2",
-//     url: "page-2",
-//     badge: false,
-//     description:
-//       "A simple example of linking to another page within a Gatsby site",
-//   },
-//   { text: "TypeScript", url: "using-typescript" },
-//   { text: "Server Side Rendering", url: "using-ssr" },
-//   { text: "Deferred Static Generation", url: "using-dsg" },
-// ]
-
-// const moreLinks = [
-//   { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-//   {
-//     text: "Documentation",
-//     url: "https://gatsbyjs.com/docs/",
-//   },
-//   {
-//     text: "Starters",
-//     url: "https://gatsbyjs.com/starters/",
-//   },
-//   {
-//     text: "Showcase",
-//     url: "https://gatsbyjs.com/showcase/",
-//   },
-//   {
-//     text: "Contributing",
-//     url: "https://www.gatsbyjs.com/contributing/",
-//   },
-//   { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-// ]
-
-// const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+import backgroundImage from '../images/S__434198.jpg';
 
 const IndexPage = () => (
   <Layout>
@@ -77,14 +17,17 @@ const IndexPage = () => (
         className="code-section overflow-hidden font-['Heebo']"
       >
         <div className="relative md:h-[700px]">
-          <div
-            className="seo-image absolute inset-0 z-0 h-full w-full bg-cover bg-center object-cover brightness-75 lg:brightness-100 hovered-element"
-            style={{
-              backgroundImage:
-                "url(https://media.gettyimages.com/id/1163745545/photo/plastic-sprue-gate-cutting-and-sucction-pad-for-plastic-injection-manufacturing-process.jpg?b=1&s=612x612&w=0&k=20&c=HRk9HG5XO6E3QAd5RNvLquocSAeAnrg_sVTRRxZ-r6M=)"
-            }}
-            data-media='{"id":"1163745545","src":"iStock","type":"image"}'
-          ></div>
+          <div className="seo-image absolute inset-0 z-0 h-full w-full bg-cover bg-center object-cover brightness-75 lg:brightness-100 hovered-element"
+             data-media='{"id":"1163745545","src":"iStock","type":"image"}'
+          >
+            <StaticImage
+              className="h-full w-full object-cover "
+              src="../images/S__434200.jpg"
+              alt="描述文本"
+              placeholder="blurred"
+              layout="fullWidth"
+            />
+          </div>
           <div className="absolute inset-0 z-10 hidden w-3/5 bg-gradient-to-r from-black to-transparent lg:block"></div>
           <div className="container relative z-10 mx-auto px-6 py-6 xl:px-12 2xl:px-36">
             <div className="flex h-full flex-col pt-10 lg:flex-row">
@@ -110,72 +53,15 @@ const IndexPage = () => (
                 <a
                   id="hero-cta-button"
                   href="#contact-us"
-                  className="primary-color-bg inline-block px-8 py-4 text-base font-semibold uppercase tracking-widest text-white hover:text-black bg-green-500"
+                  className="primary-color-bg inline-block px-8 py-4 text-base font-semibold uppercase tracking-widest text-white hover:text-black bg-green-500 no-underline"
                 >
                   聯絡我們
                 </a>
               </div>
-              <div className="hidden p-10 text-center lg:block lg:w-1/2 lg:text-left">
-                <div className="primary-color-bg primary-opacity-[80] flex flex-col space-y-4 bg-green-500/80">
-                  <form
-                    id="hero-contact-us-form"
-                    action="#"
-                    method="post"
-                    className="space-y-6 pt-8 sm:p-8"
-                  >
-                    <div id="hero-contact-us-name-field">
-                      <input
-                        id="name"
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        className="mt-2 w-full rounded bg-gray-200 p-2 shadow-sm"
-                      />
-                    </div>
-                    <div id="hero-contact-us-email-field" className="">
-                      <input
-                        id="email"
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        className="mt-2 w-full rounded bg-gray-200 p-2 shadow-sm"
-                      />
-                    </div>
-                    <div id="hero-contact-us-phone-field">
-                      <input
-                        id="phone"
-                        type="tel"
-                        name="phone"
-                        placeholder="Phone"
-                        className="mt-2 w-full rounded bg-gray-200 p-2 shadow-sm"
-                      />
-                    </div>
-                    <div id="hero-contact-us-message-field" className="">
-                      <textarea
-                        id="message"
-                        name="message"
-                        rows={4}
-                        placeholder="What Can We Help You With?"
-                        className="mt-2 w-full rounded bg-gray-200 p-2 shadow-sm"
-                        defaultValue={""}
-                      />
-                    </div>
-                    <div>
-                      <button
-                        id="hero-contact-us-submit-button"
-                        type="submit"
-                        className="w-full rounded bg-red-500 px-4 py-3 text-sm font-normal uppercase tracking-wider text-white hover:bg-red-600"
-                      >
-                        Request Service
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
             </div>
           </div>
           <div className="relative -top-[5.8rem] z-20 hidden lg:block">
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1000 100"
               preserveAspectRatio="none"
@@ -185,11 +71,11 @@ const IndexPage = () => (
                 className="fill-white"
                 d="M500,97C126.7,96.3,0.8,19.8,0,0v100l1000,0V1C1000,19.4,873.3,97.8,500,97z"
               ></path>
-            </svg>
+            </svg> */}
           </div>
         </div>
       </section>
-      <section className="code-section py-4 font-['Heebo'] md:py-8" id="obuzed">
+      <section className="code-section py-4 font-['Heebo'] md:py-8">
         <div
           id="services"
           className="container mx-auto py-12 sm:py-20 xl:px-12 2xl:px-36"
@@ -210,7 +96,7 @@ const IndexPage = () => (
               </div>
               <div
                 id="services-text"
-                className="flex-1 text-center text-xl lg:text-left"
+                className="flex-1 px-6 text-center text-xl lg:text-left"
               >
                   太樺工業成立多年服務多家代工，對於各種塑膠成型擁有相當經驗，配合模具開發到塑膠
                   射出提供整體服務
@@ -218,12 +104,13 @@ const IndexPage = () => (
             </div>
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-4">
               <div className="flex flex-1 flex-col border border-gray-300">
-                <img
-                  className="h-44 object-cover lg:max-h-none"
-                  alt=""
-                  src="https://media.gettyimages.com/id/1145647671/photo/plastic-sprue-gate-cutting-and-sucction-pad-for-plastic-injection-manufacturing-process.jpg?b=1&s=612x612&w=0&k=20&c=2KHyTV7VKThF4Uw3opG1OM5MKIOxnpwrPjpWOoGxOXk="
-                  data-media='{"id":"1145647671","src":"iStock","type":"image"}'
-                />
+              <StaticImage
+                src="../images/injection.jpg"
+                alt="描述"
+                className="h-44 object-cover lg:max-h-none"
+                placeholder="blurred"
+                layout="constrained"
+              />
                 <div
                   id="service-1-header"
                   className="py-4 text-center text-2xl font-semibold"
@@ -235,12 +122,13 @@ const IndexPage = () => (
                 </div>
               </div>
               <div className="flex flex-1 flex-col border border-gray-300">
-                <img
-                  className="h-44 object-cover lg:max-h-none"
-                  alt=""
-                  src="https://media.gettyimages.com/id/1163745545/photo/plastic-sprue-gate-cutting-and-sucction-pad-for-plastic-injection-manufacturing-process.jpg?b=1&s=612x612&w=0&k=20&c=HRk9HG5XO6E3QAd5RNvLquocSAeAnrg_sVTRRxZ-r6M="
-                  data-media='{"id":"1163745545","src":"iStock","type":"image"}'
-                />
+              <StaticImage
+                src="../images/S__9535493.jpg"
+                alt="描述"
+                className="h-44 object-cover lg:max-h-none"
+                placeholder="blurred"
+                layout="constrained"
+              />
                 <div
                   id="service-2-header"
                   className="py-4 text-center text-2xl font-semibold"
@@ -252,12 +140,13 @@ const IndexPage = () => (
                 </div>
               </div>
               <div className="flex flex-1 flex-col border border-gray-300">
-                <img
-                  className="h-44 object-cover lg:max-h-none"
-                  alt=""
-                  src="https://media.gettyimages.com/id/1153157935/photo/plastic-sprue-gate-cutting-and-sucction-pad-for-plastic-injection-manufacturing-process.jpg?b=1&s=612x612&w=0&k=20&c=ZIIpWMTEe0BMqMvPrH7wvLUtgloqdYrZWlZQNF5TMeU="
-                  data-media='{"id":"1153157935","src":"iStock","type":"image"}'
-                />
+              <StaticImage
+                src="../images/S__9535497.jpg"
+                alt="描述"
+                className="h-44 object-cover lg:max-h-none"
+                placeholder="blurred"
+                layout="constrained"
+              />
                 <div
                   id="service-3-header"
                   className="py-4 text-center text-2xl font-semibold"
@@ -269,12 +158,13 @@ const IndexPage = () => (
                 </div>
               </div>
               <div className="flex flex-1 flex-col border border-gray-300">
-                <img
-                  className="h-44 object-cover lg:max-h-none"
-                  alt=""
-                  src="https://media.gettyimages.com/id/1145648424/photo/plastic-sprue-gate-cutting-and-sucction-pad-for-plastic-injection-manufacturing-process.jpg?b=1&s=612x612&w=0&k=20&c=kPsv4O4Yvrgpjn7Fk7qhWVbiDwldtlRbkbXUJNTghFE="
-                  data-media='{"id":"1145648424","src":"iStock","type":"image"}'
-                />
+              <StaticImage
+                src="../images/S__434362.jpg"
+                alt="描述"
+                className="h-44 object-cover lg:max-h-none"
+                placeholder="blurred"
+                layout="constrained"
+              />
                 <div
                   id="service-4-header"
                   className="py-4 text-center text-2xl font-semibold"
@@ -289,11 +179,11 @@ const IndexPage = () => (
           </div>
         </div>
       </section>
-      <section className="code-section font-['Heebo']" id="qimfzn">
-        <div id="service-one" className="primary-color-bg bg-green-500">
+      <section className="code-section font-['Heebo']">
+        <div id="service-one" className="primary-color-bg bg-blue-600">
           <div className="container relative z-10 mx-auto py-12 lg:py-40 xl:px-12 2xl:px-36">
             <div className="flex flex-col-reverse lg:flex-row lg:space-x-12">
-              <div className="flex-1 text-white">
+              <div className="flex-1 text-white px-6">
                 <div
                   id="big-service-1-header"
                   className="mb-6 text-center text-5xl font-semibold lg:text-left"
@@ -311,38 +201,33 @@ const IndexPage = () => (
                 </div>
               </div>
               <div className="mb-12 flex-1 text-white">
-                <img
+                <StaticImage
                   className="max-h-64 w-full object-cover lg:max-h-none"
-                  alt=""
-                  src="https://media.gettyimages.com/id/1145647671/photo/plastic-sprue-gate-cutting-and-sucction-pad-for-plastic-injection-manufacturing-process.jpg?b=1&s=612x612&w=0&k=20&c=2KHyTV7VKThF4Uw3opG1OM5MKIOxnpwrPjpWOoGxOXk="
-                  data-media='{"id":"1145647671","src":"iStock","type":"image"}'
+                  src="../images/S__9535498.jpg"
+                  alt="描述文本"
                 />
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="code-section relative font-['Heebo']" id="pt1t1o">
+      <section className="code-section relative font-['Heebo']">
         <div
           className="absolute inset-0 h-full w-full bg-cover bg-center object-cover brightness-[0.2]"
           style={{
-            backgroundImage:
-              "url(https://media.gettyimages.com/id/1153157935/photo/plastic-sprue-gate-cutting-and-sucction-pad-for-plastic-injection-manufacturing-process.jpg?b=1&s=612x612&w=0&k=20&c=ZIIpWMTEe0BMqMvPrH7wvLUtgloqdYrZWlZQNF5TMeU=)"
-          }}
-          data-media='{"id":"1153157935","src":"iStock","type":"image"}'
-        ></div>
+            backgroundImage: `url(${backgroundImage})`
+          }}></div>
         <div id="service-two" className="">
           <div className="container relative z-10 mx-auto py-12 lg:py-40 xl:px-12 2xl:px-36">
             <div className="flex flex-col lg:flex-row lg:space-x-12">
               <div className="mb-12 flex-1">
-                <img
+                <StaticImage
                   className="max-h-64 w-full object-cover lg:max-h-none"
-                  alt=""
-                  src="https://media.gettyimages.com/id/1163745545/photo/plastic-sprue-gate-cutting-and-sucction-pad-for-plastic-injection-manufacturing-process.jpg?b=1&s=612x612&w=0&k=20&c=HRk9HG5XO6E3QAd5RNvLquocSAeAnrg_sVTRRxZ-r6M="
-                  data-media='{"id":"1163745545","src":"iStock","type":"image"}'
+                  src="../images/S__9535495.jpg"
+                  alt="描述文本"
                 />
               </div>
-              <div className="flex-1 text-white">
+              <div className="flex-1 text-white px-6">
                 <div
                   id="big-service-2-header"
                   className="mb-6 text-center text-5xl font-semibold lg:text-left"
@@ -363,13 +248,11 @@ const IndexPage = () => (
           </div>
         </div>
       </section>
-  </div>
-</div>
-    <section className="code-section font-['Heebo']" id="7jnrlk">
+    <section className="code-section font-['Heebo']">
       <div id="service-three" className="bg-white">
         <div className="container relative z-10 mx-auto py-12 lg:py-40 xl:px-12 2xl:px-36">
           <div className="flex flex-col-reverse lg:flex-row lg:space-x-12">
-            <div className="flex-1 text-black">
+            <div className="flex-1 text-black px-6">
               <div
                 id="big-service-3-header"
                 className="mb-6 text-center text-5xl font-semibold lg:text-left"
@@ -387,75 +270,18 @@ const IndexPage = () => (
               </div>
             </div>
             <div className="mb-12 flex-1 text-white">
-              <img
+              <StaticImage
                 className="max-h-64 w-full object-cover lg:max-h-none"
-                alt=""
-                src="https://media.gettyimages.com/id/1153157935/photo/plastic-sprue-gate-cutting-and-sucction-pad-for-plastic-injection-manufacturing-process.jpg?b=1&s=612x612&w=0&k=20&c=ZIIpWMTEe0BMqMvPrH7wvLUtgloqdYrZWlZQNF5TMeU="
-                data-media='{"id":"1153157935","src":"iStock","type":"image"}'
+                src="../images/S__434360.jpg"
+                alt="描述文本"
               />
             </div>
           </div>
         </div>
       </div>
     </section>
-    {/* <section className="code-section relative font-['Heebo']">
-      <div
-        className="absolute inset-0 h-full w-full bg-cover bg-center object-cover brightness-[0.2]"
-        style={{
-          backgroundImage:
-            "url(https://media.gettyimages.com/id/1145648424/photo/plastic-sprue-gate-cutting-and-sucction-pad-for-plastic-injection-manufacturing-process.jpg?b=1&s=612x612&w=0&k=20&c=kPsv4O4Yvrgpjn7Fk7qhWVbiDwldtlRbkbXUJNTghFE=)"
-        }}
-        data-media='{"id":"1145648424","src":"iStock","type":"image"}'
-      ></div>
-      <div
-        id="testimonials"
-        className="container relative z-10 mx-auto px-4 py-12 lg:py-32 xl:px-12 2xl:px-36"
-      >
-        <h3 className="primary-color-text pb-12 text-center text-3xl font-medium uppercase tracking-widest text-green-500">
-          Our Best Testimonials!
-        </h3>
-        <div
-          id="carousel"
-          className="flex flex-col items-center justify-center space-y-12 lg:flex-row lg:space-x-6 lg:space-y-0"
-        >
-          <div className="carousel-card max-w-96 relative flex flex-col items-center justify-center border border-white py-12 lg:w-1/2">
-            <div className="mb-8">
-              <i
-                className="fa-solid fa-star fa-xl"
-                style={{ color: "rgb(245, 191, 63)" }}
-              />
-              <i
-                className="fa-solid fa-star fa-xl"
-                style={{ color: "rgb(245, 191, 63)" }}
-              />
-              <i
-                className="fa-solid fa-star fa-xl"
-                style={{ color: "rgb(245, 191, 63)" }}
-              />
-              <i
-                className="fa-solid fa-star fa-xl"
-                style={{ color: "rgb(245, 191, 63)" }}
-              />
-              <i
-                className="fa-solid fa-star fa-xl"
-                style={{ color: "rgb(245, 191, 63)" }}
-              />
-            </div>
-            <div
-              id="testimonials-1-quote"
-              className="mb-4 px-10 text-center text-2xl font-thin tracking-wide text-white"
-            >
-              Working with Tai has powered our product lines to new levels.
-              Their precision, quality, and stellar turnaround times have truly
-              won us over.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> */}
     <section
       className="code-section relative bg-stone-100 font-['Heebo']"
-      id="9ve3x"
     >
       <div className="container relative z-10 mx-auto px-6 py-12 lg:py-40 xl:px-12 2xl:px-36">
         <div className="flex flex-col-reverse lg:flex-row lg:space-x-12">
@@ -480,20 +306,19 @@ const IndexPage = () => (
             </div>
             <a
               href="/#contact-us"
-              className="primary-color-bg inline-block px-8 py-4 text-center text-base font-semibold uppercase tracking-widest text-white hover:text-black bg-green-500"
+              className="primary-color-bg inline-block px-8 py-4 text-center text-base font-semibold uppercase tracking-widest text-white hover:text-green-500 bg-blue-600 no-underline"
             >
               聯絡我們
             </a>
           </div>
           <div className="relative hidden flex-1 text-white lg:block">
-            <img
+            <StaticImage
               className="aspect-square object-cover"
-              alt=""
-              src="https://media.gettyimages.com/id/1145648424/photo/plastic-sprue-gate-cutting-and-sucction-pad-for-plastic-injection-manufacturing-process.jpg?b=1&s=612x612&w=0&k=20&c=kPsv4O4Yvrgpjn7Fk7qhWVbiDwldtlRbkbXUJNTghFE="
-              data-media='{"id":"1145648424","src":"iStock","type":"image"}'
+              src="../images/S__434198.jpg"
+              alt="描述文本"
             />
             <div className="absolute bottom-0 left-0 z-[1] h-1/4 w-1/2 bg-stone-100 pt-3">
-              <div className="primary-color-bg flex h-full flex-col items-center justify-center bg-green-500">
+              <div className="primary-color-bg flex h-full flex-col items-center justify-center bg-blue-600">
                 <div
                   id="about-number-estimate"
                   className="text-3xl font-medium"
@@ -509,11 +334,10 @@ const IndexPage = () => (
               </div>
             </div>
             <div className="absolute bottom-0 right-0 z-[1] w-1/2 bg-stone-100 pl-3 pt-3">
-              <img
+              <StaticImage
                 className="aspect-square object-cover"
-                src="https://media.gettyimages.com/id/1145647671/photo/plastic-sprue-gate-cutting-and-sucction-pad-for-plastic-injection-manufacturing-process.jpg?b=1&s=612x612&w=0&k=20&c=2KHyTV7VKThF4Uw3opG1OM5MKIOxnpwrPjpWOoGxOXk="
-                alt="Hero"
-                data-media='{"id":"1145647671","src":"iStock","type":"image"}'
+                src="../images/S__9535499.jpg"
+                alt="描述文本"
               />
             </div>
           </div>
@@ -522,7 +346,6 @@ const IndexPage = () => (
     </section>
     <section
       className="code-section relative bg-white font-['Heebo']"
-      id="6nhpjs"
     >
       <div
         id="contact-us"
@@ -545,19 +368,19 @@ const IndexPage = () => (
             <div className="mb-12 flex-1">
               <iframe
                 id="contact-us-google-maps-iframe-src-override"
-                className="h-full w-full"
+                className="h-80 w-full"
                 loading="lazy"
-                src="https://maps.google.com/maps?q=Tai%20Factory&t=m&z=11&output=embed&iwloc=near"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d638.7575344297768!2d121.43638578471132!3d25.089730758993184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a6053d80d101%3A0xd028c359e2ab0715!2z5aSq5qi65bel5qWt6IKh5Lu95pyJ6ZmQ5YWs5Y-4KOWhkeiGoOWwhOWHuuaIkOWei-W7oCk!5e0!3m2!1szh-TW!2sus!4v1705687067431!5m2!1szh-TW!2sus"
                 title="Google Maps Iframe"
                 aria-label="Google Maps Iframe"
               />
             </div>
           </div>
-          <div className="primary-color-bg relative flex-1 bg-green-500">
+          <div className="primary-color-bg relative flex-1 bg-blue-600">
             <form
               id="contact-us-form"
-              action="#"
-              method="post"
+              action="https://formspree.io/f/mjvngpqz"
+              method="POST"
               className="space-y-6 p-8"
             >
               <div id="contact-us-name-field">
@@ -565,7 +388,7 @@ const IndexPage = () => (
                   id="name"
                   type="text"
                   name="name"
-                  placeholder="Name"
+                  placeholder="姓名"
                   className="mt-2 w-full rounded bg-white p-2 shadow-sm"
                 />
               </div>
@@ -574,7 +397,7 @@ const IndexPage = () => (
                   id="email"
                   type="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder="電子郵件"
                   className="mt-2 w-full rounded bg-white p-2 shadow-sm"
                 />
               </div>
@@ -583,7 +406,7 @@ const IndexPage = () => (
                   id="phone"
                   type="tel"
                   name="phone"
-                  placeholder="Phone"
+                  placeholder="電話"
                   className="mt-2 w-full rounded bg-white p-2 shadow-sm"
                 />
               </div>
@@ -592,7 +415,7 @@ const IndexPage = () => (
                   id="message"
                   name="message"
                   rows={4}
-                  placeholder="What Can We Help You With?"
+                  placeholder="有甚麼需求?"
                   className="mt-2 w-full rounded bg-white p-2 shadow-sm"
                   defaultValue={""}
                 />
@@ -601,9 +424,9 @@ const IndexPage = () => (
                 <button
                   id="contact-us-submit-button"
                   type="submit"
-                  className="w-full rounded bg-red-500 px-4 py-3 text-sm font-normal uppercase tracking-wider text-white hover:bg-red-600"
+                  className="w-full rounded bg-green-500 px-4 py-3 text-sm font-normal uppercase tracking-wider text-white hover:bg-red-600"
                 >
-                  Request Service
+                  送出資料
                 </button>
               </div>
             </form>
@@ -611,6 +434,8 @@ const IndexPage = () => (
         </div>
       </div>
     </section>
+    </div>
+  </div>
   </Layout>
 )
 

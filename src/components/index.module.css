@@ -52,3 +52,9 @@
   max-width: none;
   line-height: var(--line-height-loose);
 }
+
+.titleUnderline {
+  display: inline-block;
+  border-bottom: 2px solid #2563EB;
+  padding-bottom: 6px;
+}

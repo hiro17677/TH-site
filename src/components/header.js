@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
                   <a
                     id="nav-name-text"
                     href="/"
-                    className="primary-color-text text-3xl font-semibold text-green-500"
+                    className="primary-color-text text-2xl font-semibold text-black no-underline"
                   >
                     太樺工業股份有限公司
                   </a>
@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => (
                   id="nav-phone"
                   className="hidden text-right text-4xl font-semibold text-gray-500 lg:block"
                 >
-                  0911-123-4567
+                  0911-508-775
                 </div>
                 <div>
                   <div id="nav-cta-call" className="hidden lg:flex">
@@ -32,14 +32,14 @@ const Header = ({ siteTitle }) => (
                         id="nav-hours"
                         className="text-right font-semibold text-blue-900"
                       >
-                        Open 24 hours, 7 Days a Week
+                        周一至五， 08:30~17:30
                       </div>
                       <div className="flex justify-end">
                         <a
                           href="/#contact-us"
-                          className="rounded bg-red-500 px-4 py-2 font-semibold uppercase tracking-wider text-white"
+                          className="rounded bg-green-500 px-4 py-2 font-semibold uppercase tracking-wider text-white no-underline"
                         >
-                          Schedule Today
+                          立刻諮詢
                         </a>
                       </div>
                     </div>
@@ -54,41 +54,18 @@ const Header = ({ siteTitle }) => (
               </div>
             </div>
           </div>
-          <div className="primary-color-bg hidden lg:block bg-green-500">
+          <div className="primary-color-bg hidden lg:block bg-blue-600">
             <div className="container mx-auto px-6 py-5">
               <div className="flex items-center justify-center">
                 <div
                   id="nav-links"
                   className="hidden items-center space-x-6 lg:flex"
                 >
-                  <Link to="/about/">公司簡介</Link>
-
-                  <a
-                    id="nav-service-two"
-                    href="/#service-two"
-                    className="text-xs font-semibold uppercase tracking-widest text-white 2xl:text-sm"
-                  >
-                    設備介紹
-                  </a>
-                  <a
-                    id="nav-service-three"
-                    href="/#service-three"
-                    className="text-xs font-semibold uppercase tracking-widest text-white 2xl:text-sm"
-                  >
-                    產品介紹
-                  </a>
-                  <a
-                    href="/#testimonials"
-                    className="testimonials-link text-xs font-semibold uppercase tracking-widest text-white 2xl:text-sm"
-                  >
-                    專業知識
-                  </a>
-                  <a
-                    href="/#contact-us"
-                    className="text-xs font-semibold uppercase tracking-widest text-white 2xl:text-sm"
-                  >
-                    聯絡我們
-                  </a>
+                  <Link to="/about/" className="no-underline text-white font-bold">公司簡介</Link>                
+                  <Link to="/machines/" className="no-underline text-white font-bold">設備介紹</Link> 
+                  {/* <Link to="/product/" className="no-underline text-white font-bold">產品介紹</Link>
+                  <Link to="/blog/" className="no-underline text-white font-bold">專業知識</Link> */}
+                  <Link to="/contact/" className="no-underline text-white font-bold">聯絡我們</Link>
                 </div>
               </div>
             </div>

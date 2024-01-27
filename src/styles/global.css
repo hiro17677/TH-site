@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.custom-underline {
+    position: relative;
+    padding-bottom: 20px; /* 调整这个值来增加或减少间距 */
+  }
+  
+  .custom-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 15%;
+    height: 3px; /* 下划线的粗细 */
+    background-color: #4A90E2; /* 下划线的颜色 */
+  }
+
+  .titleUnderline {
+    display: inline-block;
+    border-bottom: 2px solid currentColor;
+  }
