@@ -63,8 +63,6 @@ const Header = ({ siteTitle }) => (
                 >
                   <Link to="/about/" className="no-underline text-white font-bold">公司簡介</Link>                
                   <Link to="/machines/" className="no-underline text-white font-bold">設備介紹</Link> 
-                  {/* <Link to="/product/" className="no-underline text-white font-bold">產品介紹</Link>
-                  <Link to="/blog/" className="no-underline text-white font-bold">專業知識</Link> */}
                   <Link to="/contact/" className="no-underline text-white font-bold">聯絡我們</Link>
                 </div>
               </div>

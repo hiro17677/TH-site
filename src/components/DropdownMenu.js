@@ -23,8 +23,6 @@ const DropdownMenu = () => {
         <div className="absolute right-0 z-10 w-40 py-2 mt-2 bg-white rounded shadow-xl">
           <Link to="/about/" className="block no-underline text-black font-bold text-center py-2">公司簡介</Link>                
           <Link to="/machines/" className="block no-underline text-black font-bold text-center py-2">設備介紹</Link> 
-          {/* <Link to="/product/" className="block no-underline text-blue-600 font-bold text-center py-2">產品介紹</Link>
-          <Link to="/blog/" className="block no-underline text-blue-600 font-bold text-center py-2">專業知識</Link> */}
           <Link to="/contact/" className="block no-underline text-black font-bold text-center py-2">聯絡我們</Link>
         </div>
       )}

@@ -1,9 +1,9 @@
-// import React from "react"
-// import { graphql, Link, useStaticQuery } from "gatsby"
-// import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
+import { graphql, Link, useStaticQuery } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 
-// const BlogPage = () => {
+const BlogPage = () => {
 //   const data = useStaticQuery(graphql`
 //     query {
 //       allContentfulArticle(sort: { fields: publishDate, order: DESC }) {
@@ -50,6 +50,6 @@
 //       {/* ... Your existing code ... */}
 //     </div>
 //   )
-// }
+}
 
-// export default BlogPage
+export default BlogPage
