@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkTaiHua=self.webpackChunkTaiHua||[]).push([[102],{7002:function(e,t,a){a.r(t);var u=a(7294),l=a(1883),n=a(9122);a(9357);t.default=()=>u.createElement(n.Z,null,u.createElement("h1",null,"About Us"),u.createElement("p",null,"This is a bit about us..."),u.createElement(l.Link,{to:"/"},"Go back to the homepage"))}}]);
+//# sourceMappingURL=component---src-pages-product-js-6d5e30491e6806a2cbb2.js.map
