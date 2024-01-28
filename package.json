@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "TaiHua",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "太樺工業股份有限公司，自1989年起，就以其卓越專業知識和技術在塑膠製品生產領域中。",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Hank Pan",
   "dependencies": {
     "autoprefixer": "^10.4.16",
     "dotenv": "^16.3.1",
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/hiro17677/TH-site"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

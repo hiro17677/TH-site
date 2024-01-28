@@ -8,7 +8,7 @@ import * as styles from "../components/index.module.css"
 
 const AboutPage = () => (
     <Layout>
-      <div className="container mx-auto text-center py-8 px-6">
+      <div className="container mx-auto text-center py-8 pl-6">
         <h1 className={`text-4xl font-bold text-gray-800 mb-4 ${styles.titleUnderline}`}>關於我們</h1>
         <p className="text-lg text-gray-600 mb-4 mx-auto pb-32">太樺工業股份有限公司，自1989年起，就以其卓越專業知識和技術在塑膠製品生產領域中。堅持「品質第一、誠信至上、服務客戶」的經營理念，我們不僅生產各式塑膠產品，更致力於為客戶提供全面的解決方案。
         <br/>
