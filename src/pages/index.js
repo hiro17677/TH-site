@@ -60,18 +60,7 @@ const IndexPage = () => (
               </div>
             </div>
           </div>
-          <div className="relative -top-[5.8rem] z-20 hidden lg:block">
-            {/* <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1000 100"
-              preserveAspectRatio="none"
-              className="relative left-1/2 h-[150px] w-[150%] -translate-x-1/2 transform"
-            >
-              <path
-                className="fill-white"
-                d="M500,97C126.7,96.3,0.8,19.8,0,0v100l1000,0V1C1000,19.4,873.3,97.8,500,97z"
-              ></path>
-            </svg> */}
+          <div className="relative -top-[5.8rem] z-20 hidden lg:block">            
           </div>
         </div>
       </section>
@@ -439,11 +428,6 @@ const IndexPage = () => (
   </Layout>
 )
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
 export const Head = () => <Seo title="Home" />
 
 export default IndexPage

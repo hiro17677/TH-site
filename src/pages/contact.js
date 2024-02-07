@@ -11,7 +11,7 @@ const ContactPage = () => (
   <Layout>
     <div className="container mx-auto py-8">
       <h1 className="text-4xl font-bold text-center mb-8">太樺工業股份有限公司</h1>
-      <div className="flex flex-wrap-reverse -mx-4 pb-32">
+      <div className="flex flex-wrap-reverse mx-4 pb-32">
         <div className="w-full max-w-full md:w-1/2 lg:w-1/2 pl-6 mb-8">
           <iframe
             id="contact-us-google-maps-iframe-src-override"

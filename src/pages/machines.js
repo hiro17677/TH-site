@@ -65,7 +65,7 @@ const MachinesPage = () => {
     <Layout>
       <div className="container mx-auto py-10">
         <h1 className="text-4xl font-bold text-center mb-8">工廠機台介紹</h1>
-        <div className="flex flex-wrap -mx-4 px-6">
+        <div className="flex flex-wrap mx-4 px-6">
           {machines.map(machine => (
             <div key={machine.id} className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
               <div className="bg-white rounded-lg overflow-hidden shadow-lg">

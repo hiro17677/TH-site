@@ -35,12 +35,7 @@ const Header = ({ siteTitle }) => (
                         周一至五， 08:30~17:30
                       </div>
                       <div className="flex justify-end">
-                        <a
-                          href="/#contact-us"
-                          className="rounded bg-green-500 px-4 py-2 font-semibold uppercase tracking-wider text-white no-underline"
-                        >
-                          立刻諮詢
-                        </a>
+                      <Link to="/contact/" className="rounded bg-green-500 px-4 py-2 font-semibold uppercase tracking-wider text-white no-underline">立刻諮詢</Link>                
                       </div>
                     </div>
                   </div>

@@ -12,7 +12,7 @@ const DropdownMenu = () => {
         className="flex items-center justify-center w-12 h-12 bg-slate-400 rounded"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {/* 汉堡菜单图标 */}
+        {/* 漢堡選單圖示 */}
         <div className="space-y-2">
           <span className="block w-7 h-0.5 bg-white"></span>
           <span className="block w-7 h-0.5 bg-white"></span>
