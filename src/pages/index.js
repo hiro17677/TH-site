@@ -201,11 +201,13 @@ const IndexPage = () => (
         </div>
       </section>
       <section className="code-section relative font-['Heebo']">
-        <div
-          className="absolute inset-0 h-full w-full bg-cover bg-center object-cover brightness-[0.2]"
-          style={{
-            backgroundImage: `url(${backgroundImage})`
-          }}></div>
+        <div>
+          <StaticImage
+            className="absolute inset-0 h-full w-full bg-cover bg-center object-cover brightness-[0.2]"
+            src="../images/S__434198.jpg"
+            alt="描述文本"
+          />
+        </div>
         <div id="service-two" className="">
           <div className="container relative z-10 mx-auto py-12 lg:py-40 xl:px-12 2xl:px-36">
             <div className="flex flex-col lg:flex-row lg:space-x-12">

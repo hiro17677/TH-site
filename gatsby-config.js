@@ -52,9 +52,16 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: "G-8VGLKREN5L",
+        // 你的GA4測量ID
+        trackingId: `G-8VGLKREN5L`,
+        // 是否在開頭就加載腳本
+        head: true,
+        // 是否應該尊重Do Not Track設置
+        respectDNT: true,
+        // 是否啟用IP匿名化
+        anonymize: true,
       },
     },
   ]
